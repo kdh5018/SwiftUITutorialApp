@@ -14,7 +14,7 @@ struct UIKitVCView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: MyViewController, context: Context) {
-        
+        print(#fileID, #function, #line, "- ")
     }
     
     
@@ -24,11 +24,7 @@ struct UIKitVCView: UIViewControllerRepresentable {
     UIKitVCView()
 }
 
-//class MyViewController: UIViewController {
-//    static var previews: some View {
-//        UIKitView()
-//    }
-//}
+
 
 class MyViewController: UIViewController {
     override func loadView() {
@@ -39,7 +35,24 @@ class MyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#fileID, #function, #line, "- ")
+        applySimpleSwiftUIView()
     }
+    
+    func applySimpleSwiftUIView() {
+        let hostingVC = UIHostingController(rootView: SimpleSwiftUIView())
+        hostingVC.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addChild(hostingVC)
+        self.view.addSubview(hostingVC.view)
+        hostingVC.didMove(toParent: self)
+        NSLayoutConstraint.activate([
+            hostingVC.view.topAnchor.constraint(equalTo: self.view.topAnchor),
+            hostingVC.view.heightAnchor.constraint(equalToConstant: 100),
+            hostingVC.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 60),
+            hostingVC.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -60)
+        ])
+    }
+    
 }
 
 //extension UIViewController {
