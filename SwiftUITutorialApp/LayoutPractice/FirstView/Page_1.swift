@@ -13,9 +13,8 @@ struct Page_1: View {
         ScrollView(.vertical, showsIndicators: true, content: {
             VStack(spacing: 20) {
                 
-                Text("Hamlet")
+                Text("김도훈")
                     .font(.title)
-                    .background(Color.random)
                     .padding(.top, 20)
                 
                 horizontalItemView
@@ -31,7 +30,7 @@ struct Page_1: View {
                 .padding(.vertical, 20)
                 .background(Color.gray)
             }
-            .background(Color.random)
+//            .background(Color.random)
         })
         
 
@@ -45,7 +44,6 @@ struct Page_1: View {
             GridItemView()
         }
         .frame(maxWidth: .infinity)
-        .background(Color.random)
     }
 }
 

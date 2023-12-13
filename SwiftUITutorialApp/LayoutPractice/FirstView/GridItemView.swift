@@ -10,17 +10,17 @@ import SwiftUI
 struct GridItemView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "flag.2.crossed.fill")
                 .resizable()
                 .frame(width: 60, height: 60)
                 .aspectRatio(contentMode: .fit)
-                .background(Color.random)
-            Text("Water wheel")
+//                .background(Color.random)
+            Text("123")
                 .font(.system(size: 18))
-                .background(Color.random)
+//                .background(Color.random)
         }
         .frame(maxWidth: .infinity)
-        .background(Color.random)
+//        .background(Color.random)
     }
     
 }

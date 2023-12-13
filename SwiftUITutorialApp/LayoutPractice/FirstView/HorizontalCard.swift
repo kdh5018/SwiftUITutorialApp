@@ -10,17 +10,16 @@ import SwiftUI
 struct HorizontalCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Hamlet")
+            Text("김도훈")
                 .font(.title)
                 .padding(.bottom, 6)
-            Text("Hamlet")
+            Text("김도훈")
                 .font(.system(size: 12))
                 .padding(6)
-                .background(Color.random.cornerRadius(10))
             Spacer()
                 .frame(height: 20)
                 .frame(maxWidth: .infinity)
-            Image(systemName: "globe")
+            Image(systemName: "gamecontroller")
                 .resizable()
                 .frame(width: 50, height: 50)
                 .aspectRatio(contentMode: .fit)
@@ -28,7 +27,7 @@ struct HorizontalCard: View {
         }
         .padding(8)
         .frame(maxWidth: .infinity)
-        .background(Color.random.cornerRadius(20))
+        .background(Color.yellow.cornerRadius(20))
     }
 }
 

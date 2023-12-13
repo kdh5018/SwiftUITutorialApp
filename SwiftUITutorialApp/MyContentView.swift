@@ -25,7 +25,7 @@ struct MyContentView: View {
             UIKitView(speed: $speed)
         }
         .frame(maxHeight: .infinity)
-        .background(Color.random)
+//        .background(Color.random)
     }
 }
 

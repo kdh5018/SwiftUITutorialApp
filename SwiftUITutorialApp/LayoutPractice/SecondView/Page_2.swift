@@ -26,9 +26,10 @@ struct Page_2: View {
         Button(action: {}) {
             Text("입장하기")
         }
+        .foregroundColor(.black)
         .frame(height: 60)
         .frame(maxWidth: .infinity)
-        .background(Color.random.cornerRadius(8))
+        .background(Color.green.cornerRadius(8))
     }
     
     var topNavView: some View {
@@ -36,29 +37,30 @@ struct Page_2: View {
             Button(action: {}) {
                 Image(systemName: "eraser.fill")
             }
+            .foregroundColor(.black)
             Spacer().frame(height: 0)
             Button(action: {}) {
-                Image(systemName: "eraser.fill")
+                Image(systemName: "plus")
             }
+            .foregroundColor(.black)
         }
-        .background(Color.random)
     }
     
     var headerView: some View {
         VStack(spacing: 0) {
-            Text("Hamlet")
+            Text("김도훈")
                 .font(.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            AsyncImage(url: URL(string: "https://randomuser.me/api/portraits/women/81.jpg"))
+            AsyncImage(url: URL(string: "https://randomuser.me/api/portraits/men/81.jpg"))
                 .frame(width: 120, height: 120)
                 .clipShape(Circle())
                 .padding(.bottom, 10)
             
             
-            Text("HamletHamletHamletHamletHamletHamletHamletHamlet")
+            Text("김도훈입니다")
                 .font(.title)
         }
-        .background(Color.random)
+//        .background(Color.random)
     }
 }
 

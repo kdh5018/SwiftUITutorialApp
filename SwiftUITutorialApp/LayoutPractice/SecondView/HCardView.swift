@@ -25,7 +25,7 @@ struct HCardView: View {
     
     var topRowView: some View {
         HStack {
-            AsyncImage(url: URL(string: "https://randomuser.me/api/portraits/women/81.jpg"))
+            AsyncImage(url: URL(string: "https://randomuser.me/api/portraits/men/81.jpg"))
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
                 .overlay(alignment: .bottomTrailing, content: {
@@ -36,27 +36,24 @@ struct HCardView: View {
                 })
             
             VStack(alignment: .leading) {
-                Text("Hamlet")
-                    .font(.title)
-                Text("Hamlet")
-                    .font(.title)
-                Text("Hamlet")
+
+                Text("김도훈")
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(maxWidth: .infinity)
         }
         .frame(maxWidth: .infinity)
-        .background(Color.random)
+//        .background(Color.random)
     }
     
     var bottomRowView: some View {
         HStack(alignment: .center) {
-            AsyncImage(url: URL(string: "https://randomuser.me/api/portraits/women/81.jpg"))
+            AsyncImage(url: URL(string: "https://randomuser.me/api/portraits/men/81.jpg"))
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30, height: 30)
                 .clipShape(Circle())
-            Text("HamletHamlet")
+            Text("김도훈")
                 .font(.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -65,7 +62,7 @@ struct HCardView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.random.cornerRadius(30))
+        .background(Color.green.cornerRadius(30))
     }
 }
 
